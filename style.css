@@ -1,0 +1,258 @@
+@font-face {
+    src: url("Black Diamonds.ttf");
+    font-family: BlackDiamond;
+}
+
+@font-face {
+    src: url("BebasNeue.ttf");
+    font-family: BebasNeue;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* navbar Styling start */
+.navbar {
+    width: 100%;
+    background-color: #EB1D21;
+}
+
+.navbar-brand {
+    font-family: BlackDiamond;
+    font-size: 31px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255 ,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* navbar Styling end */
+
+/* Section Styling start */
+#centerPart {
+    height: 78.7%;
+    width: 100%;
+    display: flex;
+}
+
+#imagePart {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+}
+
+#formPart {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+#form {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#form h1 {
+    margin-bottom: 50px;
+    color: #EB1D21;
+    font-family: BebasNeue;
+}
+
+.input {
+    border-bottom: 1px solid red;
+    margin-top: 15px;
+    width: 250px;
+}
+
+input {
+    width: 82%;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    padding-bottom: 10px;
+    outline: none;
+}
+
+.fa-envelope,
+.fa-key {
+    color: rgb(66, 65, 65);
+    margin-right: 5px;
+}
+
+.fa-exclamation-triangle {
+    color: rgb(214, 25, 29);
+    font-size: 14px;
+}
+
+.alert {
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    margin-bottom: 30px;
+    margin-left: -20px;
+    color: #EB1D21;
+}
+
+.entrMail, .entrPass, .wrngMail, .wrngPass, .errMail, .errPass{
+    display: none;
+}
+
+.formBtn {
+    width: 120px;
+    height: 30px;
+    border-radius: 30px;
+    color: #EB1D21;
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid #EB1D21;
+    outline: none;
+    margin-top: 40px;
+}
+
+.loading {
+    margin-top: 5px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-top-color: #EB1D21;
+    border-bottom-color: #EB1D21;
+    border-right-color: #EB1D21;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#form a {
+    color: #EB1D21;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#form p {
+    font-size: 14px;
+}
+
+@media(max-width:700px) {
+    .navbar{
+        position: absolute;
+    }
+    .image {
+        display: none;
+    }
+
+    #formPart {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Section Styling End */
+
+/* Footer Styling Start */
+
+footer {
+    min-height: 76px;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+#footerNav {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footerNav h1 {
+    font-family: bebasNeue;
+    line-height: 68px;
+    letter-spacing: 3px;
+}
+
+#footerNav a {
+    line-height: 76px;
+    font-size: 12px;
+}
+
+#subscribe {
+    width: 160px;
+    height: 50%;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .5px solid rgb(32, 32, 32);
+}
+
+#subscribe input {
+    width: 100px;
+}
+
+#subscribe span {
+    color: white;
+    font-size: 10px;
+    line-height: 30px;
+}
+
+@media(max-width:900px) {
+    #footerNav {
+        width: 400px;
+    }
+}
+
+@media(max-width:680px) {
+    footer {
+        padding-bottom: 20px;
+        overflow: hidden;
+        min-height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footerNav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Footer Styling End */
